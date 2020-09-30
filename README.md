@@ -1,5 +1,4 @@
 # Flick
-------
 
 ### Background
 With the rise of the competitive video gaming industry and large investments from game developers such as Valve and Riot Games in the "first person shooter"
