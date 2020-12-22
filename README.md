@@ -14,4 +14,4 @@ and advertising these tools, many game devs have rushed to create aim training t
 Create a video game aim trainer housed in a web app.
 
 ### Tech Stack
-Currently looking into game dev technologies, hoping to use JavaScript or Python to create the web app.
+JavaScript with THREE.js[https://threejs.org/]
