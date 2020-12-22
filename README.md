@@ -1,5 +1,6 @@
 # Flick
 ![GitHub](https://img.shields.io/github/license/jordanpramos/Flick)
+![GitHub]https://readthedocs.org/projects/flick/badge/?version=latest
 
 ### Background
 With the rise of the competitive video gaming industry and large investments from game developers such as Valve and Riot Games in the "first person shooter"
