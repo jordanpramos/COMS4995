@@ -1,6 +1,6 @@
 # Flick
 ![GitHub](https://img.shields.io/github/license/jordanpramos/Flick)
-![GitHub](https://readthedocs.org/projects/flick/badge/?version=latest)
+![GitHub Docs](https://readthedocs.org/projects/flick/badge/?version=latest)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/jordanpramos/Flick)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/jordanpramos/Flick/CI)
 [![Codecov](https://img.shields.io/codecov/c/github/jordanpramos/Flick)](https://codecov.io/gh/jordanpramos/Flick)
@@ -15,3 +15,5 @@ Create a video game aim trainer housed in a web app.
 
 ### Tech Stack
 JavaScript with [THREE.js](https://threejs.org/)
+
+![Screenshot](https://imgur.com/3uuM3fl)
