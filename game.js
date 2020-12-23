@@ -1,6 +1,5 @@
 /** Global variables */
 var scene, camera, target, renderer, clock; 
-var mouseDown = 0;
 var bullets = [];
 var mouse = { x: 0, y: 0 }, hit = 0;
 var WIDTH = window.innerWidth, HEIGHT = window.innerHeight
