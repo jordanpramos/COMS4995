@@ -1,4 +1,4 @@
-import { getRandomLoc, getRandomSize } from 'game.js';
+import { getRandomLoc, getRandomSize } from '../game.js';
 
 const minLoc = 0;
 const maxLoc = 5;

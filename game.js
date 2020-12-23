@@ -94,7 +94,7 @@ function lockCursor() {
  * @param {int} max - The int specifying the max -- lower bound.
  * @return {number} Location of target
 */
-function getRandomLoc(min, max) {
+export function getRandomLoc(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
@@ -106,7 +106,7 @@ function getRandomLoc(min, max) {
 	 * @param {int} max - The int specifying the max -- lower bound.
 	 * @return {number} Size of target
 */
-function getRandomSize(min, max) {
+export function getRandomSize(min, max) {
   return Math.random() * (max - min) + min;
 }
 
