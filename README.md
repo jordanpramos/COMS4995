@@ -17,3 +17,4 @@ Create a video game aim trainer housed in a web app.
 JavaScript with [THREE.js](https://threejs.org/)
 
 ![Screenshot](https://i.imgur.com/3uuM3fl.png)
+![Gif](https://i.imgur.com/jhhPrZK.gif)
