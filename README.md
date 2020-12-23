@@ -1,3 +1,5 @@
+![Screenshot](https://i.imgur.com/3uuM3fl.png)
+
 # Flick
 ![GitHub](https://img.shields.io/github/license/jordanpramos/Flick)
 ![GitHub Docs](https://readthedocs.org/projects/flick/badge/?version=latest)
@@ -16,5 +18,4 @@ Create a video game aim trainer housed in a web app.
 ### Tech Stack
 JavaScript with [THREE.js](https://threejs.org/)
 
-![Screenshot](https://i.imgur.com/3uuM3fl.png)
 ![Gif](https://i.imgur.com/jhhPrZK.gif)
