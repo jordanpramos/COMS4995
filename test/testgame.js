@@ -17,20 +17,21 @@ const { describe, it } = require('mocha');
 
 describe('game', () => {
     describe('getRandomLoc', () => {
-        it('should return type int between min and max bounds'), () => {
+        it('should return type int between min and max bounds', () => {
             assert.typeOf(loc, 'int', `getRandomLoc() does not return an int`);
             assert.equal(smaller_loc, false);
             assert.equal(bigger_loc, false);
-        }
+        
+        });
     });
 });
 
 describe('game', () => {
     describe('getRandomSize', () => {
-        it('should return type int between min and max bounds'), () => {
+        it('should return type int between min and max bounds', () => {
             assert.typeOf(size, 'int', `getRandomSize() does not return an int`);
             assert.equal(smaller_size, false);
             assert.equal(bigger_size, false);
-        }
+        });
     });
 });
