@@ -754,6 +754,11 @@
     "resolve" "^1.17.0"
     "tsconfig-paths" "^3.9.0"
 
+"eslint-plugin-only-warn@^1.0.2":
+  "integrity" "sha512-DCG8vuUynDnyfkm0POT50JoE9VJfbtKf+COHn3q79+ExW4dg9ZWM/hsMWX1mjZqxMjQledL/9TmGipon/vwWmw=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-only-warn/-/eslint-plugin-only-warn-1.0.2.tgz"
+  "version" "1.0.2"
+
 "eslint-scope@^5.1.1":
   "integrity" "sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw=="
   "resolved" "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-5.1.1.tgz"
