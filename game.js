@@ -1,5 +1,6 @@
 /** Global variables */
-var scene, camera, target, renderer, clock;
+var scene, camera, target, renderer, clock; 
+var mouseDown = 0;
 var bullets = [];
 var mouse = { x: 0, y: 0 }, hit = 0;
 var WIDTH = window.innerWidth, HEIGHT = window.innerHeight
@@ -200,6 +201,14 @@ function createPlayer(scene) {
 }
 
 /**
+	 * Adds score to HUD
+	 * @return {None}
+*/
+function addScore() {
+	$('body').append('<div id="hud"><p>Score: <span id="score">0</span></p></div>');
+}
+
+/**
 	 * Renders THREE.js WebGL scene
 	 * @param {THREE} scene - The world instance of the game
 	 * @return {None}
@@ -221,6 +230,7 @@ function init(){
 	
 	createSpace(scene)
 	spawnTarget(scene)
+	addScore()
 	createPlayer(scene)
 
 	/*var reticle = new THREE.Mesh(
@@ -246,6 +256,8 @@ function animate(){
 	target.rotation.x += 0.01;
 	target.rotation.y += 0.02;
 	
+	trackBullets();
+
 	renderer.render(scene, camera);
 }
 
@@ -256,6 +268,49 @@ function animate(){
 */
 function keyDown(event){
 	keyboard[event.keyCode] = true;
+}
+
+/**
+	 * Detects when mouse is clicked down
+	 * @return {None}
+*/
+document.body.onmousedown = function() {
+	var bullet = new THREE.Mesh(
+		new THREE.SphereGeometry(0.05,8,8),
+		new THREE.MeshBasicMaterial({color:0xffffff})
+	);
+	bullet.position.set(0, player.height, -5);
+	
+	bullet.velocity = new THREE.Vector3(-Math.sin(camera.rotation.y),0,Math.cos(camera.rotation.y));
+	bullet.alive = true;
+
+	setTimeout(function() {
+		bullet.alive = false;
+		scene.remove(bullet);
+	}, 1000);
+	
+	bullets.push(bullet);
+	scene.add(bullet);
+	player.canShoot = 10;
+}
+
+/**
+	 * Keeps track of bullets array, removing bullets that miss
+	 * @return {None}
+*/
+function trackBullets() {
+	for(var index=0; index < bullets.length; index+=1){
+		if (bullets[index] === undefined ) {
+			continue;
+		}
+
+		if (bullets[index].alive == false ) {
+			bullets.splice(index,1);
+			continue;
+		}
+		
+		bullets[index].position.add(bullets[index].velocity);
+	}
 }
 
 /**

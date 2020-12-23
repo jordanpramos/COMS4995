@@ -51,9 +51,42 @@
 				min-height: 100vh;
 			}
 
+			.helper {
+				display: inline-block;
+				height: 50%;
+				vertical-align: middle;
+			}
+
+			div img {
+				position:absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				margin:auto;
+				vertical-align: middle;
+				margin-top:40vh;
+			}
+			
+			#container {
+				position: relative;				
+				text-align: center;
+			}
+
+			#hud {
+				bottom: 10px;
+				position: absolute;
+				right: 10px;
+				z-index: 100;
+			}
+
 			</style>
 		</head>
 	<body>
+		<div id="container">
+			<img src="./images/reticle.png" alt="reticle">
+		</div>
+		
 		<script src="http://threejs.org/build/three.min.js"></script>
 		<script src="http://threejs.org/examples/js/loaders/MTLLoader.js"></script>
 		<script src="http://threejs.org/examples/js/loaders/OBJLoader.js"></script>
