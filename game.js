@@ -17,6 +17,7 @@ const blocker = document.getElementById('blocker');
 const instructions = document.getElementById('instructions');
 
 const havePointerLock = 'pointerLockElement' in document || 'mozPointerLockElement' in document || 'webkitPointerLockElement' in document;
+let controls;
 
 /**
  * Checks browser to see if cursor can be locked, locks cursor
@@ -25,15 +26,13 @@ const havePointerLock = 'pointerLockElement' in document || 'mozPointerLockEleme
  * capable of pointer lock.
  * @return {None}
 */
-function lockCursor(havePointerLock) {
+function lockCursor() {
   if (havePointerLock) {
     const element = document.body;
-    const pointerlockchange = function (event) {
-      if (document.pointerLockElement === element
-				|| document.mozPointerLockElement === element
-				|| document.webkitPointerLockElement === element) {
+    const pointerlockchange = function () {
+      if (document.pointerLockElement === element || document.mozPointerLockElement === element
+			|| document.webkitPointerLockElement === element) {
         controls.enabled = true;
-
         blocker.style.display = 'none';
       } else {
         controls.enabled = false;
@@ -46,7 +45,7 @@ function lockCursor(havePointerLock) {
       }
     };
 
-    const pointerlockerror = function (event) {
+    const pointerlockerror = function () {
       instructions.style.display = '';
     };
 
@@ -88,13 +87,12 @@ function lockCursor(havePointerLock) {
     instructions.innerHTML = 'Your browser doesn\'t seem to support Pointer Lock API';
   }
 }
-lockCursor(havePointerLock);
 
 /**
-	 * Randomizes location of target to click
-	 * @param {int} min - The int specifying the min -- lower bound.
-	 * @param {int} max - The int specifying the max -- lower bound.
-	 * @return {number} Location of target
+ * Randomizes location of target to click
+ * @param {int} min - The int specifying the min -- lower bound.
+ * @param {int} max - The int specifying the max -- lower bound.
+ * @return {number} Location of target
 */
 function getRandomLoc(min, max) {
   min = Math.ceil(min);
@@ -230,6 +228,7 @@ function init() {
   spawnTarget(scene);
   addScore();
   createPlayer(scene);
+  lockCursor(havePointerLock);
 
   /* var reticle = new THREE.Mesh(
 		new THREE.RingBufferGeometry( 0.85 * 500, 500, 32),

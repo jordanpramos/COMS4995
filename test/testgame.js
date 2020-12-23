@@ -18,7 +18,21 @@ describe('game', () => {
   describe('getRandomLoc', () => {
     it('should return type int between min and max bounds', () => {
       assert.typeOf(loc, 'int', `getRandomLoc() does not return an int`);
+    });
+  });
+});
+
+describe('game', () => {
+  describe('getRandomLoc', () => {
+    it('should return int above min', () => {
       assert.equal(smallerLoc, false);
+    });
+  });
+});
+
+describe('game', () => {
+  describe('getRandomLoc', () => {
+    it('should return type int below max', () => {
       assert.equal(biggerLoc, false);
     });
   });
@@ -26,9 +40,23 @@ describe('game', () => {
 
 describe('game', () => {
   describe('getRandomSize', () => {
-    it('should return type int between min and max bounds', () => {
+    it('should return type int', () => {
       assert.typeOf(size, 'int', `getRandomSize() does not return an int`);
+    });
+  });
+});
+
+describe('game', () => {
+  describe('getRandomSize', () => {
+    it('should return int above min', () => {
       assert.equal(smallerSize, false);
+    });
+  });
+});
+
+describe('game', () => {
+  describe('getRandomSize', () => {
+    it('should return int below max', () => {
       assert.equal(biggerSize, false);
     });
   });

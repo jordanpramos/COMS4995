@@ -14,5 +14,8 @@
         "quotes": ["error", "single", {
             "allowTemplateLiterals": true
           }]
-    }
+    },
+    "plugins": [
+        "only-warn"
+    ]
 }
