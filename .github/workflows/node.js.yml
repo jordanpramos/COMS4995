@@ -5,9 +5,9 @@ name: CI
 
 on:
   push:
-    branches: [ game ]
+    branches: [ master ]
   pull_request:
-    branches: [ game ]
+    branches: [ master ]
 
 jobs:
   build:
